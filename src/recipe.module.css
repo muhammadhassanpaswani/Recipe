@@ -1,15 +1,15 @@
 .recipe{
     border-radius: 10px;
-    
     margin: 10px;
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    min-width: 40%;
+    min-width: 50%;
     list-style: none;
-    font-size:14px ;
+    font-size: 14px ;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .recipe:hover{
@@ -19,7 +19,7 @@
     background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
 .image{
-    border-radius: 50%;
+    border-radius: 40%;
     height: 150px;
     width: 150px;
 }

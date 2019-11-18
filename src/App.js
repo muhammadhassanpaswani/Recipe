@@ -4,15 +4,15 @@ import "./App.css";
 
 function App() {
 
-   const APP_ID="e409c3d8";
-   const APP_KEY="dac019f4207a49e4270307451c794a29";
+   
    const [recipes,setRecipes]=useState([]);
    const [search,setSearch]=useState('');
    const [query,setQuery]=useState('chicken');
    useEffect(()=>{
      getReciepe();
    },[query]);
-   
+   const APP_ID="e409c3d8";
+   const APP_KEY="dac019f4207a49e4270307451c794a29";
    const getReciepe=async()=>{
      fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
      .then(res => res.json())
@@ -31,7 +31,7 @@ function App() {
     <div className="App">
      <h1 className="Heading">CHOOSE YOUR RECIPE!!!</h1>
     <form onSubmit={submitHandler} className="search-form" >
-     <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+     <input className="search-bar" type="text" placeholder="Your Recipe" value={search} onChange={updateSearch}/>
      <button type="submit" className="search-btn">Search</button>
     </form>
     <div className="recipes">
